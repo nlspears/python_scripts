@@ -1,0 +1,83 @@
+host S2
+enable password cisco
+username cisco priv 15 password 0 cisco
+
+int vlan 1
+ip address 192.168.122.232 255.255.255.0
+no shutdown
+
+line vty 0 4
+login local
+transport input all
+
+end
+wr
+
+**************************************************
+
+host S3
+enable password cisco
+username cisco priv 15 password 0 cisco
+
+int vlan 1
+ip address 192.168.122.233 255.255.255.0
+no shutdown
+
+line vty 0 4
+login local
+transport input all
+
+end
+wr
+************************************
+
+host S4
+enable password cisco
+username cisco priv 15 password 0 cisco
+
+int vlan 1
+ip address 192.168.122.234 255.255.255.0
+no shutdown
+
+line vty 0 4
+login local
+transport input all
+
+end
+wr
+!
+
+*-**********************************
+
+host S5
+enable password cisco
+username cisco priv 15 password 0 cisco
+
+int vlan 1
+ip address 192.168.122.235 255.255.255.0
+no shutdown
+
+line vty 0 4
+login local
+transport input all
+
+end
+wr
+!
+*************************************
+
+host S6
+enable password cisco
+username cisco priv 15 password 0 cisco
+
+int vlan 1
+ip address 192.168.122.236 255.255.255.0
+no shutdown
+
+line vty 0 4
+login local
+transport input all
+
+end
+wr
+!
