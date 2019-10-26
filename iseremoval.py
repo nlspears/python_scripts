@@ -26,8 +26,8 @@ for line in ipfile:
     intfaces = striplist.splitlines()
     for x in intfaces:
        intconfig = net_connect.send_command("sh run " + x + " | i dot1x")
-       findise = intconfig.find("dot1x")
-       if findise > 0:
+       findise = intconfig.find("dot1x") #checks interface for 802.1x config
+       if findise > 0:  #if 802.1x exists
            isefile=open("isefile.txt") #opening the config file with the changes you want to push
            iseconfig=isefile.read() ##reads the config file
            isefile.close() #closes the config file
@@ -37,4 +37,3 @@ for line in ipfile:
            print(gigintconfig)
        else:
            print("Non-ISE interface")
-           
